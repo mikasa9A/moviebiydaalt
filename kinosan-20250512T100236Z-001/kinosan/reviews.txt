@@ -1,0 +1,6 @@
+CREATE TABLE `mysql`.`reviews` (
+  `id` int(11) NOT NULL,
+  `movie_id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `comment` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()

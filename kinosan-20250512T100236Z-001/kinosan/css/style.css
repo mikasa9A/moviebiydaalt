@@ -1,0 +1,277 @@
+/* Reset & Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: #fff;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8em;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #f39c12;
+}
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+/* Main Sections */
+main {
+  padding: 20px 0;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.search-section input[type="text"] {
+  padding: 8px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search-section button {
+  padding: 8px 15px;
+  border: none;
+  background: #f39c12;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+.search-section button:hover {
+  background: #e67e22;
+}
+
+/* Movies Section */
+.movies h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.movie-item {
+  background: #fff;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.movie-item:hover {
+  transform: scale(1.03);
+}
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* Box Office Section */
+.box-office {
+  margin-top: 30px;
+}
+.box-office h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+.box-office-list {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.box-office-item {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.box-office-item:last-child {
+  border-bottom: none;
+}
+
+/* News Slider */
+.news-slider {
+  margin-top: 30px;
+}
+.news-slider h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+.slide {
+  min-width: 300px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Movie Detail Page */
+.movie-detail {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.movie-detail img {
+  max-width: 300px;
+  border-radius: 4px;
+}
+.movie-info {
+  flex: 1;
+}
+
+/* Registration & Forms */
+form {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 400px;
+  margin: auto;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button[type="submit"] {
+  background: #f39c12;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button[type="submit"]:hover {
+  background: #e67e22;
+}
+
+/* Static Pages (About, Help) */
+.about, .help {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .movie-grid {
+    flex-direction: column;
+  }
+  .movie-item {
+    width: 100%;
+  }
+  .movie-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background: #333;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  #menuToggle {
+    display: block;
+  }
+}
+/* Full-screen modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;  /* Reduced z-index so header (z-index: 1000) remains above */
+}
